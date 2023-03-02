@@ -17,11 +17,12 @@ namespace Quest
         public int Awesomeness { get; set; }
 
         // A constructor to make a new Adventurer object with a given name
-        public Adventurer(string name, Robe colorfulRobe)
+        public Adventurer(string name, Robe colorfulRobe, Hat hat)
         {
             Name = name;
             Awesomeness = 50;
             ColorfulRobe = colorfulRobe;
+            HatShininess = hat;
         }
 
 
@@ -57,13 +58,14 @@ namespace Quest
         {
             List<string> colors = ColorfulRobe.RobeColors;
             string colorsList = colors[0];
-            for (int i = 1; i < colors.Count; i++)
+            for (int i = 1; i < colors.Count - 1; i++)
             {
                 colorsList += $", {colors[i]}";
             }
             colorsList += $", and {colors.Last()}";
-            string description = $"{Name} has a {colorsList} robe that is {ColorfulRobe.RobeLength} inches long.";
+            string description = $"{Name} has a {colorsList} robe that is {ColorfulRobe.RobeLength} inches long, and is wearing a hat that is {HatShininess.ShininessDescription()}.";
             return description;
         }
+        public Hat HatShininess { get; set; }
     }
 }
