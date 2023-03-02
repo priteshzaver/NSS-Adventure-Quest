@@ -51,5 +51,10 @@ namespace Quest
             Console.WriteLine(adventurer.GetAdventurerStatus());
             Console.WriteLine();
         }
+
+        public static implicit operator string(Challenge v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
