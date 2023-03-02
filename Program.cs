@@ -52,7 +52,11 @@ namespace Quest
                 },
                 RobeLength = 42
             };
-            Adventurer theAdventurer = new Adventurer(Console.ReadLine(), adventurerRobe);
+            Hat adventurerHat = new Hat()
+            {
+                ShininessLevel = 5
+            };
+            Adventurer theAdventurer = new Adventurer(Console.ReadLine(), adventurerRobe, adventurerHat);
             Console.WriteLine($"{theAdventurer.GetDescription()}");
             // A list of challenges for the Adventurer to complete
             // Note we can use the List class here because have the line "using System.Collections.Generic;" at the top of the file.
