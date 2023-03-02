@@ -26,7 +26,7 @@ namespace Quest
                 shininess = "blinding";
             }
 
-            return $"The hat is {shininess}";
+            return shininess;
         }
     }
 }
