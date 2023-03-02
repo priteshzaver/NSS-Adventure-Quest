@@ -91,12 +91,10 @@ namespace Quest
                 {
                     Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
                 }
-
+               
                 Prize adventurerPrize = new Prize("The prize is this finger.");
-
                 Console.WriteLine(adventurerPrize.ShowPrize(theAdventurer));
-
-
+                
                 Console.Write("Would you like to play again? (Y/N): ");
                 Play = Console.ReadLine();
             }
