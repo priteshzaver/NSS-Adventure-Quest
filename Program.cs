@@ -31,7 +31,6 @@ namespace Quest
             Challenge tenTimesTen = new Challenge("What's 10 x 10?", 100, 1);
             Challenge onePlusOne = new Challenge("What's 1 + 1?", 2, 50);
 
-
             int minAwesomeness = 0;
             int maxAwesomeness = 100;
 
@@ -96,7 +95,11 @@ namespace Quest
                 Console.WriteLine(adventurerPrize.ShowPrize(theAdventurer));
                 
                 Console.Write("Would you like to play again? (Y/N): ");
-                Play = Console.ReadLine();
+                Play = Console.ReadLine().ToLower();
+                if (Play == "y")
+                {
+                    theAdventurer.Awesomeness = (50 + (theAdventurer.AwesomenessMultiplier * 10));
+                }
             }
         }
     }
